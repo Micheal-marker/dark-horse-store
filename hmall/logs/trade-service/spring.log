@@ -1,0 +1,52 @@
+19:37:16:072  INFO 13444 --- [main] com.hmall.trade.TradeApplication         : Starting TradeApplication using Java 11.0.28 on Allen with PID 13444 (D:\dark-horse-store\hmall\trade-service\target\classes started by 31031 in D:\dark-horse-store\hmall)
+19:37:16:074 DEBUG 13444 --- [main] com.hmall.trade.TradeApplication         : Running with Spring Boot v2.7.12, Spring v5.3.27
+19:37:16:074  INFO 13444 --- [main] com.hmall.trade.TradeApplication         : The following 1 profile is active: "local"
+19:37:17:088  INFO 13444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+19:37:17:091  INFO 13444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+19:37:17:122  INFO 13444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+19:37:17:307  INFO 13444 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e1195d71-82fe-3d60-94d1-a359a5c5c693
+19:37:17:623  INFO 13444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+19:37:17:632  INFO 13444 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+19:37:17:633  INFO 13444 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+19:37:17:780  INFO 13444 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+19:37:17:780  INFO 13444 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1665 ms
+19:37:18:490  INFO 13444 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'cart-service' URL not provided. Will try picking an instance via load-balancing.
+19:37:18:533  INFO 13444 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+19:37:20:227  INFO 13444 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+19:37:20:245  INFO 13444 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+19:37:21:731  INFO 13444 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+19:37:21:956  INFO 13444 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 30fbbf91-389e-45e0-9b22-2f40afc1f1a2
+19:37:22:001  INFO 13444 --- [main] org.reflections.Reflections              : Reflections took 23 ms to scan 1 urls, producing 3 keys and 6 values 
+19:37:22:023  INFO 13444 --- [main] org.reflections.Reflections              : Reflections took 6 ms to scan 1 urls, producing 4 keys and 9 values 
+19:37:22:029  INFO 13444 --- [main] org.reflections.Reflections              : Reflections took 5 ms to scan 1 urls, producing 3 keys and 10 values 
+19:37:22:031  WARN 13444 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+19:37:22:036  INFO 13444 --- [main] org.reflections.Reflections              : Reflections took 5 ms to scan 1 urls, producing 1 keys and 5 values 
+19:37:22:056  INFO 13444 --- [main] org.reflections.Reflections              : Reflections took 18 ms to scan 1 urls, producing 1 keys and 7 values 
+19:37:22:065  INFO 13444 --- [main] org.reflections.Reflections              : Reflections took 6 ms to scan 1 urls, producing 2 keys and 8 values 
+19:37:22:067  WARN 13444 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+19:37:22:068  INFO 13444 --- [main] com.alibaba.nacos.common.remote.client   : [30fbbf91-389e-45e0-9b22-2f40afc1f1a2] RpcClient init label, labels = {module=naming, source=sdk}
+19:37:22:070  INFO 13444 --- [main] com.alibaba.nacos.common.remote.client   : [30fbbf91-389e-45e0-9b22-2f40afc1f1a2] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+19:37:22:070  INFO 13444 --- [main] com.alibaba.nacos.common.remote.client   : [30fbbf91-389e-45e0-9b22-2f40afc1f1a2] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+19:37:22:070  INFO 13444 --- [main] com.alibaba.nacos.common.remote.client   : [30fbbf91-389e-45e0-9b22-2f40afc1f1a2] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+19:37:22:072  INFO 13444 --- [main] com.alibaba.nacos.common.remote.client   : [30fbbf91-389e-45e0-9b22-2f40afc1f1a2] Try to connect to server on start up, server: {serverIp = '192.168.43.143', server main port = 8848}
+19:37:23:362  INFO 13444 --- [main] com.alibaba.nacos.common.remote.client   : [30fbbf91-389e-45e0-9b22-2f40afc1f1a2] Success to connect to server [192.168.43.143:8848] on start up, connectionId = 1760009844482_192.168.43.144_41282
+19:37:23:363  INFO 13444 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [30fbbf91-389e-45e0-9b22-2f40afc1f1a2] Notify connected event to listeners.
+19:37:23:364  INFO 13444 --- [main] com.alibaba.nacos.common.remote.client   : [30fbbf91-389e-45e0-9b22-2f40afc1f1a2] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+19:37:23:365  INFO 13444 --- [main] com.alibaba.nacos.common.remote.client   : [30fbbf91-389e-45e0-9b22-2f40afc1f1a2] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$1112/0x000000084075e040
+19:37:23:441  INFO 13444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+19:37:23:463  INFO 13444 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP trade-service 192.168.113.1:8085 register finished
+19:37:23:964  INFO 13444 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [30fbbf91-389e-45e0-9b22-2f40afc1f1a2] Receive server push request, request = NotifySubscriberRequest, requestId = 10
+19:37:23:969  INFO 13444 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [30fbbf91-389e-45e0-9b22-2f40afc1f1a2] Ack server push request, request = NotifySubscriberRequest, requestId = 10
+19:37:24:699  INFO 13444 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+19:37:24:699  INFO 13444 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+19:37:24:702  INFO 13444 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+19:37:24:723  INFO 13444 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+19:37:24:793  INFO 13444 --- [main] com.hmall.trade.TradeApplication         : Started TradeApplication in 10.707 seconds (JVM running for 11.734)
+19:37:30:635  INFO 13444 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+19:37:30:637  INFO 13444 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+19:37:30:639  INFO 13444 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+19:37:56:598  INFO 13444 --- [http-nio-8085-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+19:37:57:020  INFO 13444 --- [http-nio-8085-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+19:37:57:027 DEBUG 13444 --- [http-nio-8085-exec-6] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+19:37:57:042 DEBUG 13444 --- [http-nio-8085-exec-6] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 123865420(Long)
+19:37:57:062 DEBUG 13444 --- [http-nio-8085-exec-6] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
