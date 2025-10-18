@@ -86,6 +86,11 @@
             <artifactId>lombok</artifactId>
             <version>${org.projectlombok.version}</version>
         </dependency>
+        <!--AMQP依赖，包含RabbitMQ-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+        </dependency>
         <!--单元测试-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
