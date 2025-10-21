@@ -6,6 +6,8 @@ import com.hmall.trade.mapper.OrderDetailMapper;
 import com.hmall.trade.service.IOrderDetailService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * <p>
  * 订单详情表 服务实现类

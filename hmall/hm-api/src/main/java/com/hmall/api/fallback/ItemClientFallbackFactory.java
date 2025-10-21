@@ -12,6 +12,7 @@ import java.util.List;
 
 @Slf4j
 public class ItemClientFallbackFactory implements FallbackFactory<ItemClient> {
+
     @Override
     public ItemClient create(Throwable cause) {
         return new ItemClient() {
@@ -25,6 +26,12 @@ public class ItemClientFallbackFactory implements FallbackFactory<ItemClient> {
             @Override
             public void deductStock(Collection<OrderDetailDTO> items) {
                 log.info("扣减商品库存失败！", cause);
+                throw new RuntimeException(cause);
+            }
+
+            @Override
+            public void restoreStock(Collection<OrderDetailDTO> items) {
+                log.info("回滚商品库存失败！", cause);
                 throw new RuntimeException(cause);
             }
         };

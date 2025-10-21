@@ -3,6 +3,7 @@ package com.hmall.api.client;
 import com.hmall.api.dto.ItemDTO;
 import com.hmall.api.dto.OrderDetailDTO;
 import com.hmall.api.fallback.ItemClientFallbackFactory;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -20,4 +21,7 @@ public interface ItemClient {
 
     @PutMapping("/items/stock/deduct")
     void deductStock(@RequestBody Collection<OrderDetailDTO> items);
+
+    @PutMapping("/items/stock/restore")
+    void restoreStock(@RequestBody Collection<OrderDetailDTO> items);
 }

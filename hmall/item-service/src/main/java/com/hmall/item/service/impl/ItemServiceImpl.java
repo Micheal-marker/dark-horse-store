@@ -43,4 +43,13 @@ public class ItemServiceImpl extends ServiceImpl<ItemMapper, Item> implements II
 //        ThreadUtil.sleep(500);
         return BeanUtils.copyList(listByIds(ids), ItemDTO.class);
     }
+
+    @Override
+    @Transactional
+    public void restoreStock(List<OrderDetailDTO> items) {
+        for (OrderDetailDTO item : items) {
+            item.setNum(-item.getNum());
+            baseMapper.updateStock(item);
+        }
+    }
 }
