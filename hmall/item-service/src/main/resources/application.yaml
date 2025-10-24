@@ -10,3 +10,9 @@ hm:
     title: 黑马商城商品管理接口文档
     desc: "黑马商城商品管理接口文档"
     package: com.hmall.item.controller
+logging:
+  level:
+    # 开启 ES 客户端日志（打印请求/响应细节）
+    org.elasticsearch.client: DEBUG
+    # 开启 ES 客户端传输层日志（可选，打印 HTTP 通信细节）
+    org.elasticsearch.client.RestClient: DEBUG
