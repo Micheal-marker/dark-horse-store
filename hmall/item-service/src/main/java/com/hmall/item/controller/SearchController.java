@@ -55,7 +55,11 @@ public class SearchController {
      */
     @ApiOperation("搜索商品（基于ES）")
     @GetMapping("/list")
-    public PageDTO<ItemDTO> search(ItemPageQuery query) throws IOException {
-        return esItemService.search(query);
+    public PageDTO<ItemDTO> search(ItemPageQuery query) {
+        try {
+            return esItemService.search(query);
+        } catch (IOException e) {
+            throw new RuntimeException("搜索服务异常，请稍后重试", e);
+        }
     }
 }
