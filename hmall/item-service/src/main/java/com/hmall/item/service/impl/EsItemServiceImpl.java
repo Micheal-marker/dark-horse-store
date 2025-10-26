@@ -13,6 +13,7 @@ import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.common.text.Text;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
+import org.elasticsearch.index.query.RangeQueryBuilder;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.SearchHits;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
@@ -71,10 +72,14 @@ public class EsItemServiceImpl implements IEsItemService {
         }
         // 2.1.4.价格过滤
         if(query.getMinPrice() != null || query.getMaxPrice() != null) {
-            boolQuery.filter(QueryBuilders.rangeQuery("price")
-                    .gte(query.getMinPrice() != null ? query.getMinPrice() : 0)
-                    .lte(query.getMaxPrice() != null ? query.getMaxPrice() : Integer.MAX_VALUE)
-            );
+            RangeQueryBuilder rangeQuery = QueryBuilders.rangeQuery("price");
+            if (query.getMinPrice() != null) {
+                rangeQuery.gte(query.getMinPrice());
+            }
+            if (query.getMaxPrice() != null) {
+                rangeQuery.lte(query.getMaxPrice());
+            }
+            boolQuery.filter(rangeQuery);
         }
 
         sourceBuilder.query(boolQuery);
