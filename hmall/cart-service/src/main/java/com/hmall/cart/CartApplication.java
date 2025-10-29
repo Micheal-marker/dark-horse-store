@@ -1,14 +1,18 @@
 package com.hmall.cart;
 
 import com.hmall.api.config.DefaultFeignConfig;
+import com.hmall.cart.config.LoadBalancerConfiguration;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClients;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 //@EnableFeignClients(basePackages = "com.hmall.api.client")
+@LoadBalancerClients(defaultConfiguration = LoadBalancerConfiguration.class)
 @EnableFeignClients(basePackages = "com.hmall.api.client", defaultConfiguration = DefaultFeignConfig.class) // 开启Feign客户端
 @MapperScan("com.hmall.cart.mapper")
 @SpringBootApplication

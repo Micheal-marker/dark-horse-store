@@ -8,8 +8,8 @@ server:
 feign:
   okhttp:
     enabled: true   # 启用 OkHttp 客户端
-  sentinel:
-    enabled: true   # 开启 Feign 的 Sentinel 支持
+#  sentinel:
+#    enabled: true   # 开启 Feign 的 Sentinel 支持
 hm:
   db:
     database: hm-cart
